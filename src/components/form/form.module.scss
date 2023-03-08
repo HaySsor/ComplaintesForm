@@ -1,0 +1,47 @@
+.forum {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  @mixin shrinkLabel {
+    transform: translate(-25px, -30px) scale(0.9);
+  }
+
+  .inputBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+    margin-top: 3rem;
+
+    label {
+      font-size: 1.5rem;
+      position: absolute;
+      z-index: -1;
+      transition: 0.5s;
+      padding-left: 2.5rem;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+    input {
+      width: 25rem;
+      height: 4rem;
+
+      border: 1px solid lightblue;
+      border-radius: 10px;
+      background-color: transparent;
+      padding-left: 15px;
+
+      &:focus ~ label {
+        @include shrinkLabel();
+      }
+    }
+
+    .shrink {
+      @include shrinkLabel();
+    }
+  }
+  .item {
+  }
+}
