@@ -1,0 +1,23 @@
+.miBox {
+    display: flex;
+    width: 45%;
+    gap : 10px;
+  .ImgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 60px;
+    }
+  }
+  .infoBox{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    .contact {
+      font-weight: bold;
+    }
+  }
+}

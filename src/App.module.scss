@@ -1,0 +1,26 @@
+.box {
+  
+  width: 18cm;
+  height: 270mm;
+
+  border: 1px solid orangered;
+  border-radius: 25px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: orangered;
+  }
+}
+
+@media print {
+  .box {
+    width: 190mm;
+    height: 270mm;
+  }
+}
