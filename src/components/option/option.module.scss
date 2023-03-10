@@ -1,0 +1,35 @@
+.select {
+  padding-left: 10px;
+  padding: 5px 10px;
+  font-size: 1.8rem;
+  display: flex;
+  border-radius: 20px;
+}
+.address {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+}
+
+  .print {
+    align-self: flex-end;
+    position: relative;
+    width: max-content;
+    padding: 10px 20px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    border-bottom: 3px solid rgb(70, 109, 134);
+    transition: transform 0.3s;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover {
+      border-bottom: 3px solid transparent;
+      transform: translateY(3px);
+    }
+  }
+

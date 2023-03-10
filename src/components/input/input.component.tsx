@@ -29,6 +29,7 @@ export const Input = ({labelText, inputProductName}: InputProps) => {
         type='text'
         onChange={handleInputValueNameProduct}
         value={productName}
+        className={styled.name}
       />
       <label className={`${productName.length > 0 ? styled.shrink : ''} `}>
         {labelText}
@@ -36,7 +37,12 @@ export const Input = ({labelText, inputProductName}: InputProps) => {
     </div>
   ) : (
     <div className={`${styled.inputBox} `}>
-      <input type='text' onChange={handleInputValue} value={inputValue} />
+      <input
+        type='text'
+        onChange={handleInputValue}
+        value={inputValue}
+        autoComplete='new-password'
+      />
       <label className={`${inputValue.length > 0 ? styled.shrink : ''} `}>
         {labelText}
       </label>

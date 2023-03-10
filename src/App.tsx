@@ -1,21 +1,13 @@
-import styled from './App.module.scss';
-import {Header} from './components/header/header.component';
-import {Form} from './components/form/form.component';
-import {useContext} from 'react';
-import {NameContext} from './context/NameContext';
-import {Statute} from './components/statute/statute.component';
-import {Signature} from './components/signature/signature.component';
-function App() {
-  const {productName} = useContext(NameContext);
+import {FormPage} from './page/Form-page/form-page.component';
+import {NameProvider} from './context/NameContext';
+import {Outlet} from 'react-router-dom';
+
+export function App() {
   return (
-    <div className={styled.box}>
-      <h1 className={styled.title}>Reklamacja {productName}</h1>
-      <Header />
-      <Form />
-      <Statute />
-      <Signature />
-    </div>
+    <>
+      <NameProvider>
+        <Outlet />
+      </NameProvider>
+    </>
   );
 }
-
-export default App;

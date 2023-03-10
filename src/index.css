@@ -15,4 +15,11 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
+  background-color: rgba(242, 145, 109, 0.382);
+}
+
+@media print {
+  body{
+    background-color: transparent;
+  }
 }

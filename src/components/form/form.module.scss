@@ -4,6 +4,7 @@
   align-content: center;
   padding-bottom: 10px;
   border-bottom: 1px solid black;
+  gap: 20px;
   @mixin shrinkLabel {
     transform: translate(-25px, -30px) scale(0.9);
   }
@@ -42,6 +43,10 @@
       @include shrinkLabel();
     }
   }
-  .item {
+  .dataBox {
+    display: flex;
+    width: 45%;
+    margin-top: 3rem;
+    gap: 5px;
   }
 }

@@ -1,5 +1,5 @@
 @mixin shrinkLabel {
-  transform: translate(-25px, -30px) scale(0.9);
+  transform: translate(-22px, -25px) scale(0.9);
 }
 
 .inputBox {
@@ -8,22 +8,21 @@
   position: relative;
   gap: 5px;
   margin-top: 3rem;
-  
 
   label {
     font-size: 1.5rem;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     transition: 0.5s;
     padding-left: 2.5rem;
-    padding-top: 10px;
+    padding-top: 4px;
     font-weight: bold;
   }
   input {
-    width: 25rem;
-    height: 4rem;
-
-    border: 2px solid lightblue;
+    z-index: 10;
+    width: 30rem;
+    padding: 5px;
+    border: 1px solid lightskyblue;
     border-radius: 10px;
     background-color: transparent;
     padding-left: 15px;
@@ -32,7 +31,6 @@
       @include shrinkLabel();
     }
   }
-
   .shrink {
     @include shrinkLabel();
   }
