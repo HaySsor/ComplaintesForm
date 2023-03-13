@@ -23,7 +23,7 @@ export const CalculatorInputsBox = ({
           <CalculatorInput
             key={item[0].includes('f') ? 'f' : name}
             labelText={`${item[0].includes('f') ? 'Pod Kasą' : name + 'zł'}`}
-            value={value}
+            value={value === 0 ? '' : value}
             name={item[0]}
             onChange={handleMoneyInCash}
           />

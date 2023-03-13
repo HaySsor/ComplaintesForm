@@ -9,7 +9,7 @@ export const TextareaInput = ({labelText, ...props}: TextareaInputType) => {
   return (
     <div className={styled.textareaBox}>
       <label>{labelText}</label>
-      <textarea {...props} />
+      <textarea {...props} maxLength={360} />
     </div>
   );
 };

@@ -23,12 +23,12 @@ export const Statute = () => {
           przepisu prawa.
         </li>
         <li>
-          {' '}
-          Dane osobowe będą przechowywane przez okres wymagany przepisami
-          prawa.5. Podanie przez Pana/Panią danych osobowych jest warunkiem
-          obsługi składanej reklamacji. Jest Pani/Pan zobowiązana/y do ich
-          podania, a konsekwencją niepodania danych osobowych brak rozpatrzenia
-          reklamacji.
+          Dane osobowe będą przechowywane przez okres wymagany przepisami prawa.
+        </li>
+        <li>
+          Podanie przez Pana/Panią danych osobowych jest warunkiem obsługi
+          składanej reklamacji. Jest Pani/Pan zobowiązana/y do ich podania, a
+          konsekwencją niepodania danych osobowych brak rozpatrzenia reklamacji.
         </li>
       </ol>
       <ol className={styled.info}>
@@ -36,7 +36,7 @@ export const Statute = () => {
         <br />
         <li>
           <span className={styled.bold}>
-            1.Wszelkie dane przechowywane (zapisane) w urządzeniu w tym m.in.
+            Wszelkie dane przechowywane (zapisane) w urządzeniu w tym m.in.
             zdjęcia, lista kontaktów, nagrania, zawartość aplikacji, karta
             pamięci powinny zostać usunięte przed przekazaniem urządzenia do
             serwisu. informujemy, iż w trakcie dokonywania czynności

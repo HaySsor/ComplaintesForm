@@ -16,10 +16,15 @@ export const FormPage = () => {
   const data = () => {
     let newDate = new Date();
     let date = newDate.toLocaleString('en-US', {day: '2-digit'});
-    let month = newDate.toLocaleString('pl-PL', {month: 'long'});
+    let month: number | string = newDate.getMonth();
     let year = newDate.getFullYear();
 
-    return `${date} ${month} ${year}`;
+    if (month < 10) {
+      month.toString()
+      month = `0${month}`
+    }
+
+    return `${date}-${month}-${year}`;
   };
 
   return (

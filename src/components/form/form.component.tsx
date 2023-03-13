@@ -33,7 +33,7 @@ export const Form = () => {
     },
     {
       id: 3,
-      labelText: 'Imie i Nazwisko',
+      labelText: 'Imię i Nazwisko',
       value: formValue.name,
       name: 'name',
       onChange: handleInputValue,
