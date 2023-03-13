@@ -7,7 +7,7 @@ interface PropsType extends ComponentProps<'input'> {
 
 export const CalculatorInput = ({labelText, ...props}: PropsType) => {
   return (
-    <div>
+    <div className={styled.inputBox}>
       <label>{labelText}</label>
       <input type='number' {...props} />
     </div>

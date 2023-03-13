@@ -1,13 +1,17 @@
 import {Header} from '../../components/header/header.component';
 import {Form} from '../../components/form/form.component';
 import {useContext} from 'react';
-import {NameContext} from '../../context/NameContext';
 import {Statute} from '../../components/statute/statute.component';
 import {Signature} from '../../components/signature/signature.component';
 import styled from './form-page.module.scss';
+import {FormValueContext} from '../../context/FormValueContext';
+import {TypeOfComplaintsContext} from '../../context/TypeOfComplaint';
 
 export const FormPage = () => {
-  const {productName} = useContext(NameContext);
+  const {formValue} = useContext(FormValueContext);
+  const {productName} = formValue;
+
+  const {typeOfComplaints} = useContext(TypeOfComplaintsContext);
 
   const data = () => {
     let newDate = new Date();
@@ -23,7 +27,9 @@ export const FormPage = () => {
       <span className={styled.data}>
         <span className={styled.text}>Data złożenia :</span> {data()}
       </span>
-      <h1 className={styled.title}>Reklamacja {productName}</h1>
+      <h1 className={styled.title}>
+        {typeOfComplaints} {productName}
+      </h1>
       <Header />
       <Form />
       <Statute />

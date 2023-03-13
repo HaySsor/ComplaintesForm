@@ -1,0 +1,36 @@
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.calcBox {
+  height: 800px;
+  width: 700px;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 0.2fr 0.2fr 0.5fr 0.2fr;
+  gap: 20px;
+
+  .mainTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    .moneySpan {
+      padding-left: 20px;
+      color: rgb(128, 75, 0);
+    }
+  }
+  .main {
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.302);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+
+
+}

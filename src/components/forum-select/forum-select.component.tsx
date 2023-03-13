@@ -1,6 +1,7 @@
 import styled from './forum-select.module.scss';
-import {useState} from 'react';
+import {useContext, useState} from 'react';
 import {Option} from '../option/option.component';
+import {TypeOfComplaintsContext} from '../../context/TypeOfComplaint';
 
 type ForumSelectType = {
   handleWarranty: (choose: boolean) => void;
@@ -13,12 +14,12 @@ export const ForumSelect = ({
   setAddress,
   address,
 }: ForumSelectType) => {
-  const [role, setRole] = useState('Gwarancja');
+  const {handleComplaints} = useContext(TypeOfComplaintsContext);
 
   const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
     value === 'Rękojmia' ? handleWarranty(true) : handleWarranty(false);
-    setRole(value);
+    handleComplaints(value);
   };
   const handleCheckBox = () => {
     setAddress(!address);
@@ -32,10 +33,6 @@ export const ForumSelect = ({
           handleCheckBox={handleCheckBox}
           handleSelect={handleSelect}
         />
-      </div>
-      <div className={styled.title}>
-        <h2>{role}</h2>
-        <p>Numer listu przewozowego :</p>
       </div>
     </div>
   );

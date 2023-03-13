@@ -31,29 +31,39 @@ export const Statute = () => {
           reklamacji.
         </li>
       </ol>
-      <p className={styled.info}>
+      <ol className={styled.info}>
         Szanowny Użytkowniku,
-        <span className={styled.bold}>
-          1.Wszelkie dane przechowywane (zapisane) w urządzeniu w tym m.in.
-          zdjęcia, lista kontaktów, nagrania, zawartość aplikacji, karta pamięci
-          powinny zostać usunięte przed przekazaniem urządzenia do serwisu.
-          informujemy, iż w trakcie dokonywania czynności serwisowych, naprawy
-          lub wymiany wadliwego lub uszkodzonego urządzenia, mogą ulec utracie,
-          uszkodzeniu lub zniszczeniu treści lub dane przechowywane (zapisane) w
-          urządzeniu. Informujemy, że nie posiadamy w swojej ofercie usługi
-          kopiowania/odzyskiwania danych zapisanych w pamięci urządzeń.{' '}
-        </span>
-        2. Czynności serwisowe prowadzone przez serwis mogą wymagać demontażu
-        zabezpieczenia ekranu w postaci folii lub szkieł ochronnych bez
-        możliwości ponownego ich montażu. Za zdemontowane ochrony ekranu nie
-        ponoszą odpowiedzialności serwis oraz Xiaomi Store. 3. W przypadku
-        zgłoszenia urządzenia w celu naprawy i braku akceptacji kosztorysu
-        naprawy, a także w celu samej diagnozy dla poznania kosztorysu naprawy
-        zobowiązuję się do pokrycia kosztów ekspertyzy technicznej oraz
-        transportu urządzenia w kwocie 75 zł. Kwota nie zostanie naliczona, gdy
-        zgłaszający zaakceptuje kosztorys naprawy i podjęta zostanie płatna
-        naprawa urządzenia.
-      </p>
+        <br />
+        <li>
+          <span className={styled.bold}>
+            1.Wszelkie dane przechowywane (zapisane) w urządzeniu w tym m.in.
+            zdjęcia, lista kontaktów, nagrania, zawartość aplikacji, karta
+            pamięci powinny zostać usunięte przed przekazaniem urządzenia do
+            serwisu. informujemy, iż w trakcie dokonywania czynności
+            serwisowych, naprawy lub wymiany wadliwego lub uszkodzonego
+            urządzenia, mogą ulec utracie, uszkodzeniu lub zniszczeniu treści
+            lub dane przechowywane (zapisane) w urządzeniu. Informujemy, że nie
+            posiadamy w swojej ofercie usługi kopiowania/odzyskiwania danych
+            zapisanych w pamięci urządzeń.{' '}
+          </span>
+        </li>
+        <li>
+          Czynności serwisowe prowadzone przez serwis mogą wymagać demontażu
+          zabezpieczenia ekranu w postaci folii lub szkieł ochronnych bez
+          możliwości ponownego ich montażu. Za zdemontowane ochrony ekranu nie
+          ponoszą odpowiedzialności serwis oraz Xiaomi Store.
+        </li>
+        <li>
+          <span className={styled.bold}>
+            W przypadku zgłoszenia urządzenia w celu naprawy i braku akceptacji
+            kosztorysu naprawy, a także w celu samej diagnozy dla poznania
+            kosztorysu naprawy zobowiązuję się do pokrycia kosztów ekspertyzy
+            technicznej oraz transportu urządzenia w kwocie 89 zł. Kwota nie
+            zostanie naliczona, gdy zgłaszający zaakceptuje kosztorys naprawy i
+            podjęta zostanie płatna naprawa urządzenia.
+          </span>
+        </li>
+      </ol>
     </div>
   );
 };

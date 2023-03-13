@@ -1,0 +1,28 @@
+.sum {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+  align-items: center;
+  margin-left: 10px;
+  gap: 10px;
+  font-size: 2rem;
+}
+.ok {
+  color: green;
+  margin-left: 40px;
+}
+.not {
+  color: red;
+  margin-left: 40px;
+}
+
+.inputsBox {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  gap: 5px;
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.302);
+  border-radius: 20px;
+}

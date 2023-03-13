@@ -1,49 +1,15 @@
 import styled from './input.module.scss';
-
-import {useState, useContext} from 'react';
-import {NameContext} from '../../context/NameContext';
-type InputProps = {
+import {ComponentProps} from 'react';
+interface InputProps extends ComponentProps<'input'> {
   labelText: string;
-  inputProductName: boolean;
-};
+}
 
-export const Input = ({labelText, inputProductName}: InputProps) => {
-  const [inputValue, setInputValue] = useState('');
-  const {productName, handleProductName} = useContext(NameContext);
-
-  const handleInputValueNameProduct = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const value = event.target.value;
-    handleProductName(value);
-  };
-
-  const handleInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setInputValue(value.toLocaleUpperCase());
-  };
-
-  return inputProductName ? (
+export const Input = ({labelText, ...props}: InputProps) => {
+  return (
     <div className={`${styled.inputBox} `}>
-      <input
-        type='text'
-        onChange={handleInputValueNameProduct}
-        value={productName}
-        className={styled.name}
-      />
-      <label className={`${productName.length > 0 ? styled.shrink : ''} `}>
-        {labelText}
-      </label>
-    </div>
-  ) : (
-    <div className={`${styled.inputBox} `}>
-      <input
-        type='text'
-        onChange={handleInputValue}
-        value={inputValue}
-        autoComplete='new-password'
-      />
-      <label className={`${inputValue.length > 0 ? styled.shrink : ''} `}>
+      <input type='text' autoComplete='new-password' {...props} />
+      <label
+        className={`${props.value && props.value ? styled.shrink : ''} `}>
         {labelText}
       </label>
     </div>

@@ -1,14 +1,15 @@
 import styled from './data-input.module.scss';
+import {ComponentProps} from 'react';
 
-type DataInputType = {
+interface DataInputType extends ComponentProps<'input'> {
   labelText: string;
-};
+}
 
-export const DataInput = ({labelText}: DataInputType) => {
+export const DataInput = ({labelText, ...props}: DataInputType) => {
   return (
     <div className={styled.inputBox}>
       <label> {labelText} </label>
-      <input type='date' />
+      <input type='date' {...props} />
     </div>
   );
 };

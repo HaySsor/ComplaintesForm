@@ -1,0 +1,19 @@
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  input {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid gray;
+  }
+}

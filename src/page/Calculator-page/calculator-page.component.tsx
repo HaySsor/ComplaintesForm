@@ -2,6 +2,8 @@ import styled from './calculator-page.module.scss';
 import {CalculatorInput} from '../../components/calculator-input/calculator-input.component';
 import {useEffect, useState} from 'react';
 import type {CalculatorInitData} from '../../types/TypeCalculator';
+import {CalculatorInputsBox} from '../../components/calculator-input-box/calculator-input-box.component';
+import {CalculatorInfoBox} from '../../components/calculator-info-box/calculator-info-box.component';
 
 const INITIAL_DATA: CalculatorInitData = {
   e200: 0,
@@ -12,16 +14,16 @@ const INITIAL_DATA: CalculatorInitData = {
   e5: 0,
   e2: 0,
   e1: 0,
-  'e0.5': 0,
-  'e0.2': 0,
-  'e0.1': 0,
+  'e0.50': 0,
+  'e0.20': 0,
+  'e0.10': 0,
   'e0.05': 0,
   'e0.02': 0,
-  'e0.01': 0,
+  f1: 0,
 };
 
 export const CalculatorPage = () => {
-  const [money, setMoney] = useState<number>();
+  const [money, setMoney] = useState<number | string>('');
   const [moneyInCash, setMoneyInCash] = useState(INITIAL_DATA);
   const [moneyValue, SetMoneyValue] = useState(INITIAL_DATA);
   const [sum, setSum] = useState(0);
@@ -47,28 +49,26 @@ export const CalculatorPage = () => {
   const labels = Object.entries(moneyInCash);
 
   return (
-    <div className={styled.calcBox}>
-      <h2>Calculator</h2>
-      <h3>Kwota z Raporu {money}</h3>
-      <CalculatorInput
-        labelText='Dzienny Utarg'
-        value={money}
-        onChange={handleMoney}
-      />
-      {labels.map((item) => {
-        const name = item[0].slice(1);
-        const value = item[1];
-        return (
+    <>
+      <div className={styled.calcBox}>
+        <h3 className={styled.mainTitle}>
+          Kwota z Raporu <span className={styled.moneySpan}> {money} </span>
+        </h3>
+        <div className={styled.main}>
           <CalculatorInput
-            key={name}
-            labelText={name}
-            value={value}
-            name={item[0]}
-            onChange={handleMoneyInCash}
+            labelText='Dzienny Utarg'
+            value={money}
+            onChange={handleMoney}
           />
-        );
-      })}
-      <h1>{isNaN(sum) ? 0 : sum}</h1>
-    </div>
+        </div>
+        <CalculatorInputsBox
+          labels={labels}
+          handleMoneyInCash={handleMoneyInCash}
+          money={money}
+          sum={sum}
+        />
+        <CalculatorInfoBox money={money} sum={sum} />
+      </div>
+    </>
   );
 };
