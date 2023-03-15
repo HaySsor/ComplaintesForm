@@ -32,6 +32,7 @@ export const CalculatorPage = () => {
     const value = event.target.value;
     setMoney(parseInt(value));
   };
+  
   const handleMoneyInCash = (event: React.ChangeEvent<HTMLInputElement>) => {
     let {name, value} = event.target;
     setMoneyInCash({...moneyInCash, [name]: value});
@@ -43,7 +44,7 @@ export const CalculatorPage = () => {
   useEffect(() => {
     const s = Object.values(moneyValue);
     let x = s.reduce((a, b) => a + b, 0);
-    setSum(x);
+    setSum(Number(x.toFixed(2)));
   }, [moneyValue]);
 
   const labels = Object.entries(moneyInCash);
