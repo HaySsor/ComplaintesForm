@@ -20,15 +20,15 @@ export const FormPage = () => {
     let year = newDate.getFullYear();
 
     if (month < 10) {
-      month.toString()
-      month = `0${month}`
+      month.toString();
+      month = `0${month}`;
     }
 
     return `${date}-${month}-${year}`;
   };
 
   return (
-    <div className={styled.box}>
+    <div className={styled.box} id='pdf-content'>
       <span className={styled.data}>
         <span className={styled.text}>Data złożenia :</span> {data()}
       </span>

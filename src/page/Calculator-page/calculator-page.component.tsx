@@ -32,13 +32,13 @@ export const CalculatorPage = () => {
     const value = event.target.value;
     setMoney(parseInt(value));
   };
-  
+
   const handleMoneyInCash = (event: React.ChangeEvent<HTMLInputElement>) => {
     let {name, value} = event.target;
     setMoneyInCash({...moneyInCash, [name]: value});
     let multiplier = parseFloat(name.slice(1));
-    let s = multiplier * parseFloat(value);
-    SetMoneyValue({...moneyValue, [name]: s});
+    let m = multiplier * parseFloat(value);
+    SetMoneyValue({...moneyValue, [name]: m});
   };
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export const CalculatorPage = () => {
           money={money}
           sum={sum}
         />
-        <CalculatorInfoBox money={money} sum={sum} />
+        <CalculatorInfoBox money={money} sum={Number(sum.toFixed(2))} />
       </div>
     </>
   );

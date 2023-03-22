@@ -13,8 +13,9 @@ export const CalculatorInfoBox = ({money, sum}: PropsType) => {
       ) : null}
       {money && sum > money ? (
         <span>
-          Oj za dużo ale {typeof money === 'number' ? sum - money : null}zł
-          będzie na kolejne wyjście 😎
+          Oj za dużo ale{' '}
+          {typeof money === 'number' ? Number((sum - money).toFixed(2)) : null}
+          zł będzie na kolejne wyjście 😎
         </span>
       ) : null}
     </div>
