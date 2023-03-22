@@ -12,24 +12,31 @@
   gap: 10px;
   font-size: 2rem;
 }
+.buttonBox{
+  display: flex;
+  justify-content: space-around;
+}
 
-  .print {
-    align-self: flex-end;
-    position: relative;
-    width: max-content;
-    padding: 10px 20px;
-    background-color: lightskyblue;
-    border: none;
-    border-radius: 20px;
-    color: black;
-    border-bottom: 3px solid rgb(70, 109, 134);
-    transition: transform 0.3s;
-    text-decoration: none;
-    font-size: 1.5rem;
+.print {
+  align-self: flex-end;
+  position: relative;
+  width: max-content;
+  padding: 10px 20px;
+  background-color: lightskyblue;
+  border: none;
+  border-radius: 20px;
+  color: black;
+  border-bottom: 3px solid rgb(70, 109, 134);
+  transition: transform 0.3s;
+  text-decoration: none;
+  font-size: 1.5rem;
 
-    &:hover {
-      border-bottom: 3px solid transparent;
-      transform: translateY(3px);
-    }
+  &:hover {
+    border-bottom: 3px solid transparent;
+    transform: translateY(3px);
   }
-
+}
+.pdf{
+  background-color: tomato;
+  border-bottom: 3px solid rgb(125, 57, 52);
+}

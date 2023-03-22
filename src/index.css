@@ -15,11 +15,13 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  background-color: rgba(242, 145, 109, 0.382);
+  background-color: #bbf0f379;
+  background-image: linear-gradient(315deg, #bbf0f383 0%, #f6d2857e 74%);
+
 }
 
 @media print {
-  body{
+  body {
     background-color: transparent;
   }
 }

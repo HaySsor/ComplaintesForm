@@ -1,6 +1,7 @@
 import styled from './home.module.scss'
 import { Link } from 'react-router-dom'
-
+import { Form } from '../../components/form/form.component'
+import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
 
 
 export const HomePage = () =>{
@@ -13,6 +14,7 @@ export const HomePage = () =>{
                 <Link to='/calc' className={styled.link}> Kalkulator</Link>
             </div>
         </div>
+        
     )
 
 }
