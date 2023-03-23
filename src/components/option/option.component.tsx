@@ -50,9 +50,9 @@ export const Option = ({handleCheckBox, address, handleSelect}: PropsType) => {
         <option value='Przedsprzedaż'>Przedsprzedaż</option>
       </select>
       <div className={styled.buttonBox}>
-        <button className={`${styled.print} ${styled.pdf}`} onClick={savePDF}>
+        {/* <button className={`${styled.print} ${styled.pdf}`} onClick={savePDF}>
           PDF
-        </button>
+        </button> */}
         <button className={`${styled.print}`} onClick={PrintFunction}>
           Drukuj
         </button>

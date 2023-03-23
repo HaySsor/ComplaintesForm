@@ -16,7 +16,7 @@ export const FormPage = () => {
   const data = () => {
     let newDate = new Date();
     let date = newDate.toLocaleString('en-US', {day: '2-digit'});
-    let month: number | string = newDate.getMonth();
+    let month: number | string = newDate.getMonth() + 1;
     let year = newDate.getFullYear();
 
     if (month < 10) {
