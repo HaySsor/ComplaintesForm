@@ -1,5 +1,5 @@
 import {ListReservationItem} from '../types/ListOfReservations';
-import {findData} from './findItem';
+import {findData} from '../helper/findItem';
 import {EditType} from '../types/EditType';
 
 export const HandleEditList = (

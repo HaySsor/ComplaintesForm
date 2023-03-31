@@ -1,8 +1,8 @@
 import {createContext, useState} from 'react';
 import type {ListReservationItem} from '../types/ListOfReservations';
-import {changeChecked} from '../hook/changeList';
+import {changeChecked} from '../helper/changeList';
 import type {EditType} from '../types/EditType';
-import {HandleEditList} from '../hook/onHandleEditList';
+import {HandleEditList} from '../hook/useHandleEditList';
 
 export const ListOfReservationsContext = createContext({
   listOfReservations: [] as ListReservationItem[],
