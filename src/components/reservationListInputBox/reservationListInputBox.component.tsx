@@ -3,6 +3,7 @@ import {Input} from '../input/input.component';
 import {useState, ChangeEventHandler, ChangeEvent, useContext} from 'react';
 import type {ListReservationItem} from '../../types/ListOfReservations';
 import {ListOfReservationsContext} from '../../context/ListOfReservationsContext';
+import {Button} from '../button/button.component';
 
 const INITIAL_STATE: ListReservationItem = {
   id: '',
@@ -47,32 +48,37 @@ export const ReservationListInputBox = () => {
   };
 
   return (
-    <div className={styled.container}>
-      <h3>Dane Kontaktowe</h3>
-      <form className={styled.inputBox} onSubmit={handleSubmit}>
-        <Input
-          labelText='Imie'
-          name='name'
-          value={name}
-          onChange={handleInputValue}
-          className={error ? styled.error : ''}
-        />
-        <Input
-          labelText='Numer / Email'
-          name='number'
-          value={number}
-          onChange={handleInputValue}
-          className={error ? styled.error : ''}
-        />
-        <Input
-          labelText='Nazwa Produktu'
-          name='product'
-          value={product}
-          onChange={handleInputValue}
-          className={error ? styled.error : ''}
-        />
-        <button className={styled.add}>Dodaj</button>
-      </form>
-    </div>
+
+      <div className={styled.box}>
+        <h3>Dane Kontaktowe</h3>
+        <form className={styled.inputBox} onSubmit={handleSubmit}>
+          <Input
+            required={true}
+            labelText='Imie'
+            name='name'
+            value={name}
+            onChange={handleInputValue}
+            className={error ? styled.error : ''}
+          />
+          <Input
+            required={true}
+            labelText='Numer / Email'
+            name='number'
+            value={number}
+            onChange={handleInputValue}
+            className={error ? styled.error : ''}
+          />
+          <Input
+            required={true}
+            labelText='Nazwa Produktu'
+            name='product'
+            value={product}
+            onChange={handleInputValue}
+            className={error ? styled.error : ''}
+          />
+          <Button ButtonText='Dodaj'/>
+        </form>
+      </div>
+    
   );
 };

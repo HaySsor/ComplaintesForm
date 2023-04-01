@@ -2,7 +2,7 @@ import {createContext, useState} from 'react';
 import type {ListReservationItem} from '../types/ListOfReservations';
 import {changeChecked} from '../helper/changeList';
 import type {EditType} from '../types/EditType';
-import {HandleEditList} from '../hook/useHandleEditList';
+import {useHandleEditList} from '../hook/useHandleEditList';
 
 export const ListOfReservationsContext = createContext({
   listOfReservations: [] as ListReservationItem[],
@@ -50,7 +50,7 @@ export const ListOfReservationsProvider = ({children}: PropsType) => {
   };
 
   const handleEdit = (obj: EditType, id: string | number) => {
-    const changedList = HandleEditList(obj, id, listOfReservations);
+    const changedList = useHandleEditList(obj, id, listOfReservations);
     changedList && setListOfReservations(changedList);
   };
 

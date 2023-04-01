@@ -99,19 +99,25 @@ export const ReservationListItem = ({
           />
         );
       })}
-      <input
-        type='checkbox'
-        checked={SMS}
-        className={styled.infoSpan}
-        onChange={handleSms}
-      />
-      <input
-        type='checkbox'
-        checked={done}
-        className={styled.infoSpan}
-        value='Odebrane'
-        onChange={handleDone}
-      />
+      <div className={styled.checkbox}>
+        <span>SMS:</span>
+        <input
+          type='checkbox'
+          checked={SMS}
+          className={styled.infoSpan}
+          onChange={handleSms}
+        />
+      </div>
+      <div className={styled.checkbox}>
+        <span>Odebrane:</span>
+        <input
+          type='checkbox'
+          checked={done}
+          className={styled.infoSpan}
+          value='Odebrane'
+          onChange={handleDone}
+        />
+      </div>
       <button className={styled.delete} onClick={handleDelate}>
         X
       </button>

@@ -6,8 +6,10 @@ export const ListPage = () => {
   return (
     <div className={styled.ListBox}>
       <ReservationListInputBox />
-      <h3>Lista Rezerwacji</h3>
-      <ReservationList />
+      <div className={styled.listContainer}>
+        <h3>Lista Rezerwacji</h3>
+        <ReservationList />
+      </div>
     </div>
   );
 };

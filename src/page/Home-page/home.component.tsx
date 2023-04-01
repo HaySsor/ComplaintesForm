@@ -13,19 +13,19 @@ export const HomePage = () => {
       <div className={styled.linkBox}>
         <Link to='./form' className={styled.link}>
           <div className={styled.infoBox}>
-            <img src='/public/icon/contract.png' alt='' area-hidden={true} />
+            <img src='/icon/contract.png' alt='' area-hidden={true} />
             <span>Reklamacje</span>
           </div>
         </Link>
         <Link to='/calc' className={styled.link}>
           <div className={styled.infoBox}>
-            <img src='/public/icon/calculator.png' alt='' area-hidden={true} />
+            <img src='/icon/calculator.png' alt='' area-hidden={true} />
             <span>Kalkulator</span>
           </div>
         </Link>
         <Link to='/listPage' className={styled.link}>
           <div className={styled.infoBox}>
-            <img src='/public/icon/to-do-list.png' alt='' area-hidden={true} />
+            <img src='/icon/to-do-list.png' alt='' area-hidden={true} />
             <span>Rezerwacje</span>
           </div>
         </Link>

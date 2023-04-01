@@ -1,33 +1,37 @@
 .list {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  justify-content: space-around;
-  border: 1px solid gray;
+  background-color: lightgoldenrodyellow;
+  aspect-ratio: 1/1;
   padding: 20px;
-  border-radius: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   position: relative;
-  margin-top: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.293);
 
-  .infoSpan {
-    flex: 1;
-    font-size: 1.4rem;
-    text-align: center;
+
+  .checkbox{
+    display: flex;
+    font-size: 1.2rem;
+    gap: 10px;
+    input{
+      width: 30px;
+      
+    }
   }
+
   .delete{
     position: absolute;
-    top:50%;
-    right: 30px;
-    width: 25px;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    border: none;
     aspect-ratio: 1/1;
     background-color: lightcoral;
     border-radius: 50%;
-    border: none;
-    transform: translateY(-50%);
-    transition: background-color 0.3s ease-in-out;
-    
+
     &:hover{
-      background-color: tomato;
+      background-color: rgb(255, 38, 0);
     }
   }
 }
