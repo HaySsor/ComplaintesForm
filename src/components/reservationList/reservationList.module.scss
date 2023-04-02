@@ -1,0 +1,22 @@
+@use '../../assets/animateGradient' as G ;
+
+.ListContainer {
+  position: relative;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  gap: 10px;
+  width: 700px;
+  border-radius: 20px;
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    transform: scale(1.02);
+    border-radius: 20px;
+    z-index: -1;
+    @include G.gradient;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.459);
+  }
+}

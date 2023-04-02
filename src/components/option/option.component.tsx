@@ -1,25 +1,26 @@
 import styled from './option.module.scss';
+import {Button} from '../button/button.component';
 
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+// import html2canvas from 'html2canvas';
+// import jsPDF from 'jspdf';
 
-const savePDF = () => {
-  const input = document.getElementById('pdf-content') as HTMLElement;
+// const savePDF = () => {
+//   const input = document.getElementById('pdf-content') as HTMLElement;
 
-  html2canvas(input, {scale: 3}).then((canvas) => {
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new jsPDF();
-    pdf.addImage(
-      imgData,
-      'PNG',
-      0,
-      0,
-      pdf.internal.pageSize.getWidth(),
-      pdf.internal.pageSize.getHeight()
-    );
-    pdf.save('page.pdf');
-  });
-};
+//   html2canvas(input, {scale: 3}).then((canvas) => {
+//     const imgData = canvas.toDataURL('image/png');
+//     const pdf = new jsPDF();
+//     pdf.addImage(
+//       imgData,
+//       'PNG',
+//       0,
+//       0,
+//       pdf.internal.pageSize.getWidth(),
+//       pdf.internal.pageSize.getHeight()
+//     );
+//     pdf.save('page.pdf');
+//   });
+// };
 
 type PropsType = {
   address: boolean;
@@ -33,7 +34,7 @@ export const Option = ({handleCheckBox, address, handleSelect}: PropsType) => {
   };
 
   return (
-    <>
+    <div className={styled.optionContainer}>
       <label className={styled.address}>
         {' '}
         <input
@@ -53,10 +54,8 @@ export const Option = ({handleCheckBox, address, handleSelect}: PropsType) => {
         {/* <button className={`${styled.print} ${styled.pdf}`} onClick={savePDF}>
           PDF
         </button> */}
-        <button className={`${styled.print}`} onClick={PrintFunction}>
-          Drukuj
-        </button>
+        <Button ButtonText='Drukuj' onClick={PrintFunction} />
       </div>
-    </>
+    </div>
   );
 };

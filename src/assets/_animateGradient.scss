@@ -1,0 +1,26 @@
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+$gradient-color1: #861657;
+$gradient-color2: #ffa69e;
+
+@mixin gradient {
+  background: linear-gradient(
+    var(--gradient-angle),
+    $gradient-color1,
+    $gradient-color2
+  );
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}

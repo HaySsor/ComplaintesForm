@@ -9,13 +9,13 @@ export const CalculatorInfoBox = ({money, sum}: PropsType) => {
   return (
     <div className={styled.infoBox}>
       {money && sum === money ? (
-        <span>Wszystko się zgadza, No i to mnie się podoba 😎</span>
+        <span>Gooden Joben 👍🏻</span>
       ) : null}
       {money && sum > money ? (
         <span>
-          Oj za dużo ale{' '}
+          Oj za dużo o {' '}
           {typeof money === 'number' ? Number((sum - money).toFixed(2)) : null}
-          zł będzie na kolejne wyjście 😎
+          zł ale cii 🤫
         </span>
       ) : null}
     </div>

@@ -27,13 +27,11 @@ export const ForumSelect = ({
 
   return (
     <div className={styled.role}>
-      <div className={styled.optionBox}>
-        <Option
-          address={address}
-          handleCheckBox={handleCheckBox}
-          handleSelect={handleSelect}
-        />
-      </div>
+      <Option
+        address={address}
+        handleCheckBox={handleCheckBox}
+        handleSelect={handleSelect}
+      />
     </div>
   );
 };

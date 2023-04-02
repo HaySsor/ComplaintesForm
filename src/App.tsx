@@ -1,6 +1,7 @@
 import {FormPage} from './page/Form-page/form-page.component';
 import {FormValueProvider} from './context/FormValueContext';
 import {TypeOfComplaintsProvider} from './context/TypeOfComplaint';
+import {ListOfReservationsProvider} from './context/ListOfReservationsContext';
 import {Outlet} from 'react-router-dom';
 
 export function App() {
@@ -8,7 +9,9 @@ export function App() {
     <>
       <TypeOfComplaintsProvider>
         <FormValueProvider>
-          <Outlet />
+          <ListOfReservationsProvider>
+            <Outlet />
+          </ListOfReservationsProvider>
         </FormValueProvider>
       </TypeOfComplaintsProvider>
     </>

@@ -1,11 +1,11 @@
 .sum {
-  display: flex;
-  justify-content: flex-start;
+  grid-column: 1/-1;
+  width: 100%;
   margin-top: 30px;
-  align-items: center;
-  margin-left: 10px;
-  gap: 10px;
-  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  font-size: 3rem;
 }
 .ok {
   color: green;
@@ -19,10 +19,8 @@
 .inputsBox {
   padding: 30px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-content: center;
   gap: 5px;
-  background-color: white;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.302);
-  border-radius: 20px;
+
 }

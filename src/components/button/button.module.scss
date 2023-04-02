@@ -1,0 +1,17 @@
+.button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px 10px;
+  background-color: rgba(255, 68, 0, 0.46);
+  transition: transform 0.3s, background-color 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: rgba(61, 28, 16, 0.46);
+    color: white;
+  }
+}
