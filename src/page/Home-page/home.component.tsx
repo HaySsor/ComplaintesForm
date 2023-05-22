@@ -2,8 +2,6 @@ import styled from './home.module.scss';
 import {Link} from 'react-router-dom';
 
 export const HomePage = () => {
-  const klucz = import.meta.env.VITE_API_KEY;
-
   return (
     <div className={styled.homeBox}>
       <div className={styled.titleBox}>
@@ -30,8 +28,6 @@ export const HomePage = () => {
             <img src='/icon/to-do-list.png' alt='' area-hidden={true} />
             <span>Rezerwacje</span>
           </div>
-
-          <h1>{klucz}</h1>
         </Link>
       </div>
     </div>
